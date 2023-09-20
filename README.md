@@ -17,12 +17,12 @@ Berdnik Lyubov 153502
 ## Use cases
 * Non-authorized user
   * See animals list
-  * See zoo premises list
+  * See zoo placements list
   * Authorize
 * Authorized user
   * Employee
     * See animals list
-    * See zoo premises list
+    * See zoo placements list
     * Personal information CRUD
     * See activity area
   * Admin
