@@ -89,5 +89,9 @@ Berdnik Lyubov 153502
     * id SERIAL PRIMARY KEY NOT NULL,
     * client_id INTEGER REFERENCES client(id) ON DELETE CASCADE,
     * permission_id INTEGER REFERENCES auth_permission(id) ON DELETE CASCADE
+14. `placement_employee`
+    * placement_id INTEGER REFERENCES placement(id) ON DELETE CASCADE,
+    * employee_id INTEGER REFERENCES employee(id) ON DELETE CASCADE, 
+    * PRIMARY KEY (placement_id, employee_id)
 ## Block-scheme
 ![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/Диаграмма.svg)
