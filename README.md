@@ -90,3 +90,5 @@ Berdnik Lyubov 153502
     * id SERIAL PRIMARY KEY NOT NULL,
     * client_id INTEGER REFERENCES client(id) ON DELETE CASCADE,
     * permission_id INTEGER REFERENCES auth_permission(id) ON DELETE CASCADE
+## Block-scheme
+![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/Диаграмма.svg)
