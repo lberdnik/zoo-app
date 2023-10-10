@@ -67,7 +67,6 @@ Berdnik Lyubov 153502
    * job_title VARCHAR(128) NOT NULL
 9. `employee`
    * id SERIAL PRIMARY KEY NOT NULL,
-   * id SERIAL PRIMARY KEY NOT NULL,
    * firstname VARCHAR(128) NOT NULL,
    * lastname VARCHAR(128) NOT NULL,
    * patronymic VARCHAR(128),
