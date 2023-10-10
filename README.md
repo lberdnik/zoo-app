@@ -77,19 +77,11 @@ Berdnik Lyubov 153502
     * username VARCHAR(150) UNIQUE NOT NULL,
     * password VARCHAR(128) NOT NULL,
     * employee_id INTEGER REFERENCES employee(id) ON DELETE CASCADE
-11. `client`
+11. `admin`
     * id SERIAL PRIMARY KEY NOT NULL,
     * address VARCHAR(100),
     * phone_number VARCHAR(20) CHECK (phone_number ~ E'^\\+375 \\(\\d{2}\\) \\d{3}-\\d{2}-\\d{2}$')
-12. `client_groups`
-    * id SERIAL PRIMARY KEY NOT NULL,
-    * client_id INTEGER REFERENCES client(id) ON DELETE CASCADE,
-    * group_id INTEGER REFERENCES auth_group(id) ON DELETE CASCADE
-13. `client_user_permissions`
-    * id SERIAL PRIMARY KEY NOT NULL,
-    * client_id INTEGER REFERENCES client(id) ON DELETE CASCADE,
-    * permission_id INTEGER REFERENCES auth_permission(id) ON DELETE CASCADE
-14. `placement_employee`
+12. `placement_employee`
     * placement_id INTEGER REFERENCES placement(id) ON DELETE CASCADE,
     * employee_id INTEGER REFERENCES employee(id) ON DELETE CASCADE, 
     * PRIMARY KEY (placement_id, employee_id)
