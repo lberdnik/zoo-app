@@ -82,4 +82,4 @@ Berdnik Lyubov 153502
     * address VARCHAR(100),
     * phone_number VARCHAR(20) CHECK (phone_number ~ E'^\\+375 \\(\\d{2}\\) \\d{3}-\\d{2}-\\d{2}$')
 ## Block-scheme
-![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/Диаграмма.svg)
+![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/диаграмма.png)
