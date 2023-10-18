@@ -81,9 +81,5 @@ Berdnik Lyubov 153502
     * id SERIAL PRIMARY KEY NOT NULL,
     * address VARCHAR(100),
     * phone_number VARCHAR(20) CHECK (phone_number ~ E'^\\+375 \\(\\d{2}\\) \\d{3}-\\d{2}-\\d{2}$')
-12. `placement_employee`
-    * placement_id INTEGER REFERENCES placement(id) ON DELETE CASCADE,
-    * employee_id INTEGER REFERENCES employee(id) ON DELETE CASCADE, 
-    * PRIMARY KEY (placement_id, employee_id)
 ## Block-scheme
 ![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/Диаграмма.svg)
