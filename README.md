@@ -80,6 +80,8 @@ Berdnik Lyubov 153502
 11. `admin`
     * id SERIAL PRIMARY KEY NOT NULL,
     * address VARCHAR(100),
-    * phone_number VARCHAR(20) CHECK (phone_number ~ E'^\\+375 \\(\\d{2}\\) \\d{3}-\\d{2}-\\d{2}$')
+    * phone_number VARCHAR(20) CHECK (phone_number ~ E'^\\+375 \\(\\d{2}\\) \\d{3}-\\d{2}-\\d{2}$'),
+    * username VARCHAR(150) UNIQUE NOT NULL,
+    * password_hash VARCHAR(128) NOT NULL
 ## Block-scheme
 ![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/диаграмма.png)
