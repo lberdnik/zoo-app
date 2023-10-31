@@ -83,5 +83,9 @@ Berdnik Lyubov 153502
     * phone_number VARCHAR(20) CHECK (phone_number ~ E'^\\+375 \\(\\d{2}\\) \\d{3}-\\d{2}-\\d{2}$'),
     * username VARCHAR(150) UNIQUE NOT NULL,
     * password_hash VARCHAR(128) NOT NULL
+12. 'animal_food'
+    * id SERIAL PRIMARY KEY NOT NULL,
+    * animal_id INTEGER REFERENCES animal(id) ON DELETE CASCADE,
+    * food_id INTEGER REFERENCES food(id) ON DELETE CASCADE
 ## Block-scheme
 ![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/диаграмма.png)
