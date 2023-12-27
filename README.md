@@ -4,29 +4,38 @@ Berdnik Lyubov 153502
 
 ## Functional requirements
 * User authorization
-* The role system (roles: EMPLOYEE, ADMIN)
+* The role system (roles: USER, ADMIN)
 * Logging user actions
-* Staff CRUD (ADMIN)
 * Animals CRUD (ADMIN)
-* Zones and complexes CRUD (ADMIN)
-* Info (animals) (EMPLOYEE, ADMIN)
-* Info (premises) (EMPLOYEE, ADMIN)
-* Personal information CRUD (EMPLOYEE)
-* Activity area (EMPLOYEE)
+* Employee CRUD (ADMIN)
+* Kind CRUD (ADMIN)
+* Info (animals) (USER, ADMIN)
+* Info (complex) (USER, ADMIN)
+* Info (placements) (USER, ADMIN)
+* Info (kind) (USER, ADMIN)
+* Info (classes) (USER, ADMIN)
+* Info (countries) (USER, ADMIN)
+* Info (food) (USER, ADMIN)
+* Info (employees) (USER, ADMIN)
 
 ## Use cases
 * Non-authorized user
   * See animals list
+  * See zoo complexes list
   * See zoo placements list
   * Authorize
 * Authorized user
-  * Employee
+  * User
     * See animals list
+    * See zoo complexes list
     * See zoo placements list
-    * Personal information CRUD
-    * See activity area
+    * See zoo kind list
+    * See zoo classes list
+    * See zoo countries list
+    * See zoo food list
+    * See zoo employees list
   * Admin
-    * CRUD with all entities
+    * Edit entities data
 
 ## Entities
 1. `food`
