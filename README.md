@@ -101,5 +101,9 @@ Berdnik Lyubov 153502
     * id SERIAL PRIMARY KEY NOT NULL,
     * user_id INTEGER REFERENCES user(id) ON DELETE CASCADE,
     * complex_id INTEGER REFERENCES complex(id) ON DELETE CASCADE
+14. `cashback`
+    * id SERIAL PRIMARY KEY NOT NULL,
+    * user_id INTEGER REFERENCES user(id) ON DELETE CASCADE,
+    * cashback INTEGER NOT NULL
 ## Block-scheme
 ![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/диаграмма.png)
