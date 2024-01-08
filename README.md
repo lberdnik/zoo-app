@@ -5,37 +5,38 @@ Berdnik Lyubov 153502
 ## Functional requirements
 * User authorization
 * The role system (roles: USER, ADMIN)
-* Logging user actions
-* Animals CRUD (ADMIN)
-* Employee CRUD (ADMIN)
-* Kind CRUD (ADMIN)
-* Info (animals) (USER, ADMIN)
-* Info (complex) (USER, ADMIN)
-* Info (placements) (USER, ADMIN)
-* Info (kind) (USER, ADMIN)
-* Info (classes) (USER, ADMIN)
-* Info (countries) (USER, ADMIN)
-* Info (food) (USER, ADMIN)
-* Info (employees) (USER, ADMIN)
+* CRUD for all entities (ADMIN)
+* Info for all entities (USER)
+* Buy ticket and get cashback (USER)
 
 ## Use cases
 * Non-authorized user
   * See animals list
   * See zoo complexes list
   * See zoo placements list
+  * See zoo kinds list
+  * See zoo classes list
+  * See zoo countries list
+  * See zoo food list
+  * See zoo employees list
+  * See zoo jobs list
   * Authorize
 * Authorized user
   * User
     * See animals list
     * See zoo complexes list
     * See zoo placements list
-    * See zoo kind list
+    * See zoo kinds list
     * See zoo classes list
     * See zoo countries list
     * See zoo food list
     * See zoo employees list
+    * See zoo jobs list
+    * Logout
+    * Buy ticket
+    * Get cashback
   * Admin
-    * Edit entities data
+    * CRUD all entities data
 
 ## Entities
 1. `food`
@@ -96,5 +97,9 @@ Berdnik Lyubov 153502
     * id SERIAL PRIMARY KEY NOT NULL,
     * animal_id INTEGER REFERENCES animal(id) ON DELETE CASCADE,
     * food_id INTEGER REFERENCES food(id) ON DELETE CASCADE
+13. `orders`
+    * id SERIAL PRIMARY KEY NOT NULL,
+    * user_id INTEGER REFERENCES user(id) ON DELETE CASCADE,
+    * complex_id INTEGER REFERENCES complex(id) ON DELETE CASCADE
 ## Block-scheme
 ![Entity diagram](https://github.com/lberdnik/zoo-app/blob/main/диаграмма.png)
